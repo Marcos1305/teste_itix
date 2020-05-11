@@ -1,27 +1,24 @@
-#container {
-  text-align: center;
+$green-primary: #00995d;
+$green-secondary: #006b3e;
+$green-lemon: #bed700;
+$white-primary: #f2f2f2;
+$white-secondary: #cfd3d6;
+$grey: #5b5c85;
+$black: #1e1e1e;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.navbar {
+  height: 60px;
+  background: $green-primary;
+  display: flex;
+  padding: 0 5px;
+  .icon {
+    color: #ffffff;
+    font-size: 32px;
+  }
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 }
