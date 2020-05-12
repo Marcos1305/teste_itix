@@ -1,11 +1,65 @@
 <ion-header>
-  <ion-toolbar color="green-primary" class="navbar" mode="md">
+  <ion-toolbar class="navbar" mode="md">
     <ion-buttons slot="start" class="icon">
       <fa-icon [icon]="iconBackToolbar"></fa-icon>
     </ion-buttons>
     <ion-buttons slot="end" class="icon">
-      <ion-icon name="menu"></ion-icon>
+      <fa-icon [icon]="iconMenuToolbar"></fa-icon>
     </ion-buttons>
     <ion-title class="title">Aniversariantes</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content class="content">
+  <div class="tab-bar">
+    <div class="item active">
+      <span class="label">Aniversários</span>
+    </div>
+    <div class="item">
+      <span class="label">Unimed</span>
+    </div>
+  </div>
+  <div class="inner-padding">
+    <h1 class="main-call">
+      Veja os cooperados que comemoram aniversário. Selecione uma data ou
+      pesquise pelo nome.
+    </h1>
+    <ion-card class="mb-24">
+      <ion-card-content class="calendar-card">
+        <fa-icon class="icon" [icon]="iconCalendar"></fa-icon>
+        <span class="month">Outubro - 2017</span>
+        <fa-icon class="icon" [icon]="iconToCalendar"></fa-icon>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="mb-24">
+      <ion-card-content class="birthday_card">
+        <span>
+          Nome do aniversariante:
+        </span>
+        <input class="input" />
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="mb-24">
+      <ion-card-content class="birthdays_card">
+        <div class="header">
+          <span class="title">
+            Aniversariantes do dia
+          </span>
+          <div class="day_month">
+            <span class="day">
+              30
+            </span>
+            <span class="month">
+              out
+            </span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <ul class="birthdays">
+          <li *ngFor="let item of birthdays; let i = index">
+            {{item}}
+          </li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

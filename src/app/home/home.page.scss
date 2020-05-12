@@ -6,11 +6,44 @@ $white-secondary: #cfd3d6;
 $grey: #5b5c85;
 $black: #1e1e1e;
 
+// HELPERS
+ion-card {
+  margin: 0;
+  box-shadow: 0 4px 2px -2px gray;
+  background: #fff;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  margin: 10px 0;
+  background-color: $white-secondary;
+}
+
+.content {
+  --ion-background-color: #f2f2f2;
+  .inner-padding {
+    padding: 0 10px;
+  }
+  .main-call {
+    font-size: 13px;
+    color: #5b5c65;
+    font-weight: lighter;
+  }
+}
+// HELPERS_END
+
+// NAV_BAR
 .navbar {
   height: 60px;
-  background: $green-primary;
+  --background: #00995d;
   display: flex;
   padding: 0 5px;
+
   .icon {
     color: #ffffff;
     font-size: 32px;
@@ -22,3 +55,99 @@ $black: #1e1e1e;
     color: #ffffff;
   }
 }
+// NAV_BAR_END
+
+// TAB_BAR
+.tab-bar {
+  background-color: $green-secondary;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  .item {
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    .label {
+      color: #00bb6c;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    &.active {
+      border-bottom: 2.5px solid $green-lemon;
+      .label {
+        color: #ffffff;
+        font-weight: bold;
+      }
+    }
+  }
+}
+// TAB_BAR_END
+
+// CALENDAR_CARD
+.calendar-card {
+  color: $green-primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .icon {
+    font-size: 30px;
+  }
+  .month {
+    text-transform: uppercase;
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+  }
+}
+// CALENDAR_CARD_END
+
+// BIRTHDAY_CARD
+.birthday_card {
+  .input {
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid $white-secondary;
+    font-size: 24px;
+    color: $grey;
+  }
+}
+// BIRTHDAY_CARD_END
+
+// BIRTHDAYS_CARD
+.birthdays_card {
+  .header {
+    display: flex;
+    color: #5b5c65;
+    align-items: center;
+    .title {
+      flex: 1;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .day_month {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      .month {
+        color: $green-primary;
+      }
+    }
+  }
+  .birthdays {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 50px;
+    color: rgb(30, 30, 30);
+  }
+}
+// BIRTHDAYS_CARD_END

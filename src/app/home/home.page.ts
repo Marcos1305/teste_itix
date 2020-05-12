@@ -1,5 +1,10 @@
 import { Component } from "@angular/core";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleLeft,
+  faBars,
+  faCalendar,
+  faCaretRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-home",
@@ -8,6 +13,19 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 })
 export class HomePage {
   iconBackToolbar = faAngleLeft;
+  iconMenuToolbar = faBars;
+  iconCalendar = faCalendar;
+  iconToCalendar = faCaretRight;
+
+  birthdays = [
+    "José da Silva Teixeira",
+    "Luiz Carlos Garcia",
+    "Maria Aparecida Vieira Couto",
+    "Roberto Almeida Spoletti",
+    "Ana Maria Cerqueira",
+    "Pedro Arthur Nogueira Rispinni",
+    "Francine Fonseca Pedrini",
+  ];
 
   constructor() {}
 }
